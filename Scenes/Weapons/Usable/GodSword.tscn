@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Scenes/Weapons/SwingWeapon.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Textures/Weapons/weapon_golden_sword.png" type="Texture" id=2]
+
+[node name="GodSword" instance=ExtResource( 1 )]
+damage = 3
+attack_speed = 10.0
+
+[node name="Sprite" parent="." index="0"]
+position = Vector2( 12, 0 )
+texture = ExtResource( 2 )
+
+[node name="CollisionPolygon2D" parent="." index="1"]
+position = Vector2( 2, 0 )
+polygon = PoolVector2Array( 19, 3, 19, 2, 20, 2, 20, 1, 21, 1, 21, -1, 20, -1, 20, -2, 19, -2, 19, -3, 6, -3, 6, 3 )

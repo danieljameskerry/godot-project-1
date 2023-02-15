@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Scenes/Weapons/StabWeapon.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Textures/Weapons/weapon_spear.png" type="Texture" id=2]
+
+[node name="Spear" instance=ExtResource( 1 )]
+damage = 2
+
+[node name="Sprite" parent="." index="0"]
+position = Vector2( 14, 0 )
+texture = ExtResource( 2 )
+
+[node name="CollisionPolygon2D" parent="." index="1"]
+polygon = PoolVector2Array( 28, 2, 28, 1, 29, 1, 29, -1, 28, -1, 28, -2, 27, -2, 27, -3, 22, -3, 22, 3, 27, 3, 27, 2 )

@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Scenes/Weapons/SwingWeapon.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Textures/Weapons/weapon_axe.png" type="Texture" id=2]
+
+[node name="Axe" instance=ExtResource( 1 )]
+damage = 2
+attack_speed = 1.8
+
+[node name="Sprite" parent="." index="0"]
+position = Vector2( 10.5, 1 )
+texture = ExtResource( 2 )
+
+[node name="CollisionPolygon2D" parent="." index="1"]
+polygon = PoolVector2Array( 10, 5.5, 19, 5.5, 19, -3.5, 14, -3.5, 14, 0.5, 14, 1.5, 13, 1.5, 13, 2.5, 12, 2.5, 12, 3.5, 11, 3.5, 11, 4.5, 10, 4.5 )

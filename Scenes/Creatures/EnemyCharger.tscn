@@ -1,0 +1,14 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Scenes/Creatures/Creature.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scripts/Creatures/EnemyCharger.gd" type="Script" id=2]
+[ext_resource path="res://Textures/Creatures/OrcSprites.png" type="Texture" id=3]
+
+[node name="EnemyCharger" instance=ExtResource( 1 )]
+script = ExtResource( 2 )
+max_speed = 30
+
+[node name="Sprite" parent="." index="0"]
+position = Vector2( 0, -5.5 )
+texture = ExtResource( 3 )
+hframes = 8

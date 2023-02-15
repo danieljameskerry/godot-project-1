@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Scenes/Interactables/WorldPickup.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Textures/Interactables/key.png" type="Texture" id=2]
+
+[sub_resource type="CapsuleShape2D" id=1]
+radius = 3.3089
+height = 7.39759
+
+[node name="KeyPickup" instance=ExtResource( 1 )]
+pickup = "keys"
+
+[node name="Sprite" parent="." index="0"]
+position = Vector2( -0.5, -1 )
+texture = ExtResource( 2 )
+
+[node name="CollisionShape2D" parent="." index="1"]
+position = Vector2( 0, -1 )
+shape = SubResource( 1 )
